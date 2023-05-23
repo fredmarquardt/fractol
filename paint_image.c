@@ -6,7 +6,7 @@
 /*   By: fmarquar <fmarquar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 16:59:34 by fmarquar          #+#    #+#             */
-/*   Updated: 2023/04/10 13:21:13 by fmarquar         ###   ########.fr       */
+/*   Updated: 2023/05/23 13:57:17 by fmarquar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ unsigned long int	rgba(int r, int g, int b, int a)
 
 unsigned long int	neon(int c_f)
 {
-	//c_f /= 5;
-	//c_f %= c_f;
 	if (c_f < 5)
 		return (rgba(0, 0, 0, 255));
 	if (c_f >= 5 && c_f < 0.2 * M_ITER)
