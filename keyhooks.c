@@ -6,7 +6,7 @@
 /*   By: fmarquar <fmarquar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 15:46:05 by fmarquar          #+#    #+#             */
-/*   Updated: 2023/05/23 11:04:02 by fmarquar         ###   ########.fr       */
+/*   Updated: 2023/05/23 13:37:02 by fmarquar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ void	my_keyhook(mlx_key_data_t keydata, void *param)
 		mlx_delete_image(data->mlx, data->img);
 		mlx_terminate(data->mlx);
 		mlx_close_window(data->mlx);
+		free_data(data);
 		ft_exit(EXIT_SUCCESS);
 		return ;
 	}
@@ -40,7 +41,6 @@ void	my_keyhook(mlx_key_data_t keydata, void *param)
 void	ft_exit(int exit_code)
 {
 	ft_printf("Hope you enjoyed the Fractal :)\n");
-	system("leaks Game");
 	exit(exit_code);
 	return ;
 }

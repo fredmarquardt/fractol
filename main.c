@@ -6,7 +6,7 @@
 /*   By: fmarquar <fmarquar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 11:38:29 by fmarquar          #+#    #+#             */
-/*   Updated: 2023/05/23 11:14:41 by fmarquar         ###   ########.fr       */
+/*   Updated: 2023/05/23 13:37:33 by fmarquar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ t_data	*init_data(void)
 	return (data);
 }
 
-int32_t	main2(int argc, char *argv[])
+int32_t	main(int argc, char *argv[])
 {
 	t_data	*data;
 
@@ -65,13 +65,13 @@ int32_t	main2(int argc, char *argv[])
 	mlx_delete_image(data->mlx, data->img);
 	mlx_terminate(data->mlx);
 	free_data(data);
-	system("leaks Game");
 	exit(EXIT_SUCCESS);
 	return (EXIT_SUCCESS);
 }
-
+/*
 int	main(int argc, char **argv)
 {
 	main2(argc, argv);
 	system("leaks Game");
 }
+ */

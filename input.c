@@ -6,7 +6,7 @@
 /*   By: fmarquar <fmarquar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/09 12:29:13 by fmarquar          #+#    #+#             */
-/*   Updated: 2023/05/23 11:00:29 by fmarquar         ###   ########.fr       */
+/*   Updated: 2023/05/23 13:35:23 by fmarquar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int	ft_exit_instr(int exit_code, t_data *data)
 {
 	instructions();
 	mlx_close_window(data->mlx);
+	free_data(data);
 	exit(exit_code);
 	return (exit_code);
 }
